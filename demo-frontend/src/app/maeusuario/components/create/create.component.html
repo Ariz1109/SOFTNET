@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-card-title>
+      Agregar Nuevo Usuario
+    </mat-card-title>
+    <mat-card-content>
+      <div class="form-content" [formGroup]="formMaeUsuario">
+        <div class="form-control-group">
+          <mat-form-field appearance="outline">
+            <mat-label>Tipo de Documento</mat-label>
+            <input matInput formControlName="tipDocumento">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Documento de Identidad</mat-label>
+            <input matInput formControlName="varDocIdentidad">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Apellidos</mat-label>
+            <input matInput formControlName="varApellidos">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Nombres</mat-label>
+            <input matInput formControlName="varNombres">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input matInput formControlName="varPassword" type="password">
+          </mat-form-field>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Número de Teléfono</mat-label>
+            <input matInput formControlName="varNumTelefono">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-footer>
+      <button mat-raised-button (click)="guardar()" [disabled]="formMaeUsuario.invalid">Guardar</button>
+      <button mat-raised-button (click)="cancelar()">Cancelar</button>
+    </mat-card-footer>
+  </mat-card>

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f04ddb05-5d82-4969-9ffa-cf2e7c7c49ec/AppServices/subscriptions/f04ddb05-5d82-4969-9ffa-cf2e7c7c49ec/resourceGroups/rgMiguelZapata/providers/Microsoft.Web/sites/appmiguelzapata",
+    "appService.deploySubpath": "dist\\bootcamp-frontend"
+}

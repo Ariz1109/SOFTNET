@@ -1,0 +1,77 @@
+<h1>
+    Tabla DetUsuarioEmpresa
+  </h1>
+  <div>
+    <button mat-raised-button (click)="agregarDetUsuarioEmpresa()">Agregar</button>
+  </div>
+  <div class="table-container">
+    <table mat-table [dataSource]="detUsuarioEmpresaDataSource">
+      <ng-container matColumnDef="codEmpresa">
+        <th mat-header-cell *matHeaderCellDef>Cod. Empresa</th>
+        <td mat-cell *matCellDef="let row">
+          {{row.codEmpresa}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="codUsuario">
+        <th mat-header-cell *matHeaderCellDef>Cod. Usuario</th>
+        <td mat-cell *matCellDef="let row">
+          {{row.codUsuario}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="varNombres">
+        <th mat-header-cell *matHeaderCellDef>Nombres</th>
+        <td mat-cell *matCellDef="let row">
+          {{row.varNombres}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="varApellidos">
+        <th mat-header-cell *matHeaderCellDef>Apellidos</th>
+        <td mat-cell *matCellDef="let row">
+          {{row.varApellidos}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="varDocIdentidad">
+        <th mat-header-cell *matHeaderCellDef>Doc. Identidad</th>
+        <td mat-cell *matCellDef="let row">
+          {{row.varDocIdentidad}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="varCargo">
+        <th mat-header-cell *matHeaderCellDef>Cargo</th>
+        <td mat-cell *matCellDef="let row">
+          {{row.varCargo}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="varCorreo">
+        <th mat-header-cell *matHeaderCellDef>Correo</th>
+        <td mat-cell *matCellDef="let row">
+          {{row.varCorreo}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="varNomImagen">
+        <th mat-header-cell *matHeaderCellDef>Imagen</th>
+        <td mat-cell *matCellDef="let row">
+          {{row.varNomImagen}}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Acciones</th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button (click)="editarDetUsuarioEmpresa(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="eliminarDetUsuarioEmpresa(row)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr *matNoDataRow>
+        <td>
+          No hay datos disponibles
+        </td>
+      </tr>
+    </table>
+  </div>

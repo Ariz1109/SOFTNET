@@ -1,0 +1,46 @@
+<mat-card>
+    <mat-card-title>
+        Agregar Nuevo Usuario Empresa
+      </mat-card-title>
+      <mat-card-content>
+        <div class="form-content" [formGroup]="formDetUsuarioEmpresa">
+          <div class="form-control-group">
+            <mat-form-field appearance="outline">
+              <mat-label>Cod Empresa</mat-label>
+              <input matInput formControlName="codEmpresa">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+              <mat-label>Cod Usuario</mat-label>
+              <input matInput formControlName="codUsuario">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+              <mat-label>Cargo</mat-label>
+              <input matInput formControlName="varCargo">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+              <mat-label>Correo</mat-label>
+              <input matInput formControlName="varCorreo" type="email">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+              <mat-label>Estado</mat-label>
+              <input matInput formControlName="intEstado">
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+              <mat-label>Nombre Imagen</mat-label>
+              <input matInput formControlName="varNomImagen">
+            </mat-form-field>
+
+            
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-footer>
+        <button mat-raised-button (click)="guardar()" [disabled]="formDetUsuarioEmpresa.invalid">Guardar</button>
+        <button mat-raised-button (click)="cancelar()">Cancelar</button>
+      </mat-card-footer>
+</mat-card>
