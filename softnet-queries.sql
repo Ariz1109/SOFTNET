@@ -57,6 +57,7 @@ BEGIN
     INSERT INTO MaeUsuario (TipDocumento, VarDocIdentidad, VarApellidos, VarNombres, VarPassword, VarNumTelefono, IntFlgEliminado, FecRegistro)
     VALUES (@TipDocumento, @VarDocIdentidad, @VarApellidos, @VarNombres, @VarPassword, @VarNumTelefono, 0, GETDATE());
 END;
+GO
 
 CREATE PROCEDURE [dbo].[Usp_Upd_MaeUsuario]
     @CodUsuario INT,
@@ -145,6 +146,7 @@ BEGIN
         FecModificacion = GETDATE()
     WHERE CodEmpresa = @CodEmpresa AND CodUsuario = @CodUsuario;
 END;
+GO
 
 CREATE PROCEDURE [dbo].[Usp_Del_DetUsuarioEmpresa]
     @CodEmpresa INT,
